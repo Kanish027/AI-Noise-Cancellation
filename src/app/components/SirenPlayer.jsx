@@ -109,13 +109,20 @@ const SirenPlayer = () => {
       <div className="flex items-center justify-center py-5 gap-5">
         <div className="text-gray-600 font-bold">Without AI Mic</div>
         <div className=" flex items-center">
-          <label className="inline-flex items-center cursor-pointer">
+          <label
+            className={
+              !isPlaying
+                ? "inline-flex items-center"
+                : "inline-flex items-center cursor-pointer"
+            }
+          >
             <input
               type="checkbox"
               value=""
               className="sr-only peer"
               checked={switchOn}
               onChange={handleSwitchChange}
+              disabled={!isPlaying}
             />
             <div className="relative w-9 h-5 bg-gray-400  peer-focus:outline-none  rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-4 after:w-4 after:transition-all dark:border-gray-600 peer-checked:bg-blue-500"></div>
           </label>

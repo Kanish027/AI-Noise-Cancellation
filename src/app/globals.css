@@ -1,0 +1,94 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+h2 {
+  font-size: 32px;
+  line-height: 64px;
+  font-weight: 700;
+}
+
+.subtitle {
+  font-size: 21px;
+  line-height: 36px;
+  font-weight: 700;
+  color: #131032 !important;
+}
+
+.description {
+  color: #131032 !important;
+  font-weight: 400 !important;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  box-sizing: border-box !important;
+}
+
+.text-body {
+  font-size: 16px;
+  line-height: 28px;
+  color: #131032;
+  font-weight: 400;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.play-btn {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.play-btn i {
+  font-size: 2rem;
+  color: #ff4081; /* Adjust the color as needed */
+}
+
+.ripple {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  /* background: rgba(188, 32, 84, 0.8); */
+  border: 5px solid rgb(171, 5, 60);
+  animation: ripple 0.8s linear infinite;
+}
+
+@keyframes ripple {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 60px;
+    height: 60px;
+    opacity: 0;
+  }
+}
+
+.progress {
+  position: relative;
+  width: 100%;
+  height: 46px;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+.playing_progress {
+  top: 0;
+  height: 46;
+  left: 0;
+  position: absolute;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
+img,
+video {
+  max-width: none;
+  height: auto;
+}
